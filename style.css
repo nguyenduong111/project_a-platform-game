@@ -1,0 +1,122 @@
+.game {
+    overflow: hidden;
+    max-width: 650px;
+    max-height: 450px;
+    position: relative;
+}
+
+.background {  
+    background: rgb(0, 0, 0);
+    table-layout: fixed;
+    border-spacing: 0;              
+}
+
+.background td {
+    padding: 0;                     
+}
+
+.lava {
+    background-image: linear-gradient(rgb(255, 136, 0), rgb(255, 96, 5), red);
+    /* background: rgb(255, 100, 100); */
+    /* background-image: url("../project_2_a-platform-game/lava.jpg"); */
+    /* object-fit: cover; */
+}
+
+.wall { 
+    border: 1px solid rgb(70, 48, 48);
+    background: rgb(104, 51, 51);
+    /* background-image: url("../project_2_a-platform-game/wall.png");
+    object-fit: cover;
+    object-position: center;              */
+}
+
+.actor {
+    position: absolute;            
+}
+
+.coin {
+    border-radius: 50%;
+    background: rgb(241, 229, 89);
+    box-shadow: -1px -3px 8px white, 0px 3px 8px white; 
+}
+
+.player { 
+    background: rgb(44, 203, 231);
+    
+}
+
+.lost .player {
+    background: rgb(163, 55, 5);
+}
+
+.won .player {
+    box-shadow: 0px -5px 8px white, 0px 5px 8px white;  
+}
+
+#point {
+    position: absolute;
+    top: 110px;
+    left: 700px;
+    margin: 0px;
+    font-size: 30px;
+    color: red;
+    font-weight: 600;
+}
+
+#rankLevel {
+    position: absolute;
+    top: 20px;
+    left: 700px;
+    margin: 0px;
+    font-size: 30px;
+    color: red;
+    font-weight: 600;
+}
+
+#result {
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    margin: 0px;
+    font-size: 60px;
+    color: red;
+    font-weight: 600;
+}
+
+#secret {
+    position: absolute;
+    top: 115px;
+    left: 140px;
+    margin: 0px;
+    font-size: 23px;
+    color: red;
+    font-weight: 600;}
+
+.lives img {
+    position: absolute;
+    top: 60px;
+    left: 700px;
+    width: 40px;
+    height: 40px;
+}
+
+#live {
+    position: absolute;
+    top: 60px;
+    left: 770px;
+    margin: 0px;
+    font-size: 30px;
+    color: red;
+    font-weight: 600;    
+}
+
+#help {
+    position: absolute;
+    top: 360px;
+    left: 700px;
+    margin: 0px;
+    font-size: 30px;
+    color: red;
+    font-weight: 600;
+
+}
