@@ -721,9 +721,9 @@ async function runGame(plans, Display) {                                        
                 }
             }
             if(lives >= 0) {                                                                     // khi kết thúc plans (nếu vẫn còn lives)
-                document.getElementById("result").innerHTML = `You've master!`;                     // chiến thắng
+                document.getElementById("result").innerHTML = `You're master!`;                     // chiến thắng
             } else {                                                                             // nếu lives về âm
-                document.getElementById("result").innerHTML = `You've good!`;                      // thất bại
+                document.getElementById("result").innerHTML = `Fighting!`;                      // thất bại
             }       
         } else {
             return;
