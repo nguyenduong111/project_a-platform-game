@@ -690,7 +690,7 @@ function runLevel(level, Display) {
 async function runGame(plans, Display) {                                                 // là 1 hàm async
     var lives = 3;                                                                       // số mạng chơi (lives)
     document.getElementById("help").innerHTML = `move with arrow keys<br> "esc" to pause<br> "f5" to play again`;
-    for (var level = 0; level < 1 && lives >= 0;) {                           // vòng lặp game
+    for (var level = 0; level < plans.length - 1 && lives >= 0;) {                           // vòng lặp game
         document.getElementById("rankLevel").innerHTML = `Level: ${level + 1}`;          // hiển thị text
         document.getElementById("live").innerHTML = `: ${lives}`;                        // hiển thị text
         let status = await runLevel(new Level(plans[level]),Display);                    // biến trạng thái (won or lost) nhận từ Promise của  runLevel (await: đợi đến khi nào Promise trả về trạng thái mới chạy tiếp)
@@ -713,7 +713,7 @@ async function runGame(plans, Display) {                                        
             for (;lives >= 0;) {                           
                 document.getElementById("rankLevel").innerHTML = `Level: xxx`;          // hiển thị text
                 document.getElementById("live").innerHTML = `: ${lives}`;                        // hiển thị text
-                let status = await runLevel(new Level(plans[1]),Display);                    // biến trạng thái (won or lost) nhận từ Promise của  runLevel (await: đợi đến khi nào Promise trả về trạng thái mới chạy tiếp)
+                let status = await runLevel(new Level(plans[plans.length - 1]),Display);                    // biến trạng thái (won or lost) nhận từ Promise của  runLevel (await: đợi đến khi nào Promise trả về trạng thái mới chạy tiếp)
                 if (status == "won") {
                     break;
                 } else {                                                                         // status == "lost"
